@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+</head>
+<body>
+
+    <h1>Book Details</h1>
+
+    <p>Title: {{ book.title }}</p>
+    <p>Author: {{ book.author }}</p>
+    <p>Price: {{ book.price }}</p>
+    <p>Published Date: {{ book.published_date }}</p>
+    <a href="{% url 'edit_book' book.id %}">Edit Book</a>
+
+    <form method="POST" action="{% url 'delete_book' book.id %}">
+    {% csrf_token %}
+
+    <button type="submit">Delete Book</button>
+</form>
+
+</body>
+</html>
