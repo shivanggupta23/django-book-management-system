@@ -4,12 +4,14 @@
 <head>
     <title>Book Management System</title>
     <link rel="stylesheet" type="text/css" href="{% static 'books/style.css' %}">
+
 </head>
 <body>
 
     <h1>Book Management System</h1>
 
     <p>{{message}}</p>
+    <a href="{% url 'book_detail' book.id %}"></a>
 
 </body>
 </html>
